@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.example.ciscen.qianfan.fragment.MineFragment"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@mipmap/ic_mine_top_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <com.example.ciscen.qianfan.view.PolygonImageView
+                android:id="@+id/login_iv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:onClick="onClick"
+                android:scaleType="centerInside"
+                android:src="@mipmap/regist_logo"
+                app:poly_corner_radius="20"
+                app:poly_rotation_angle="90"
+                app:poly_vertices="6"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="登陆/注册"
+                android:textColor="@android:color/white"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#eeeeee"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/attention_mine_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#f5f5f5"
+            android:onClick="onClick"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/attention_mine_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@mipmap/ic_mine_foucs"/>
+
+            <TextView
+                android:id="@+id/attention_mine_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/attention_mine_iv"
+                android:text="我的关注"
+                android:textIsSelectable="false"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/num_attention_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@id/attention_mine_tv"
+                android:text="0"
+                android:textColor="#CB9C64"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/ic_allow"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/money_mine_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="#f5f5f5"
+            android:onClick="onClick"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/money_mine_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@mipmap/ic_mine_hb"/>
+
+            <TextView
+                android:id="@+id/money_mine_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/money_mine_iv"
+                android:text="我的帆币"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/num_money_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@id/money_mine_tv"
+                android:text="0"
+                android:textColor="#CB9C64"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/first_money_tv"
+                android:src="@mipmap/ic_recharge_gift"/>
+
+            <TextView
+                android:id="@+id/first_money_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/mark_money_iv"
+                android:src="@mipmap/ic_mine_hb"
+                android:text="首冲送豪礼"
+                android:textColor="#DF352A"
+                android:textSize="12sp"
+                />
+
+            <ImageView
+                android:id="@+id/mark_money_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/ic_allow"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/baby_mine_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="#f5f5f5"
+            android:onClick="onClick"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/baby_mine_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@mipmap/ic_mine_fangbao"/>
+
+            <TextView
+                android:id="@+id/baby_mine_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/baby_mine_iv"
+                android:text="我的帆宝"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/num_baby_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@id/baby_mine_tv"
+                android:text="0"
+                android:textColor="#CB9C64"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/ic_allow"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/bag_mine_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="#f5f5f5"
+            android:onClick="onClick"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/bag_mine_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@mipmap/ic_mine_bag"/>
+
+            <TextView
+                android:id="@+id/bag_mine_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/bag_mine_iv"
+                android:text="我的背包"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/vip_bag_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/car_bag_iv"
+                android:src="@mipmap/ic_mine_user_vip_off"/>
+
+            <ImageView
+                android:id="@+id/car_bag_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/shou_bag_iv"
+                android:src="@mipmap/ic_mine_user_car_off"/>
+
+            <ImageView
+                android:id="@+id/shou_bag_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/mark_bag_iv"
+                android:src="@mipmap/ic_mine_user_shou_off"/>
+
+            <ImageView
+                android:id="@+id/mark_bag_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/ic_allow"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/data_mine_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="#f5f5f5"
+            android:onClick="onClick"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/data_mine_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@mipmap/ic_mine_edit"/>
+
+            <TextView
+                android:id="@+id/data_mine_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/data_mine_iv"
+                android:text="编辑资料"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/ic_allow"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/set_mine_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="#f5f5f5"
+            android:onClick="onClick"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/set_mine_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@mipmap/ic_mine_setting"/>
+
+            <TextView
+                android:id="@+id/set_mine_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/set_mine_iv"
+                android:text="设置"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/ic_allow"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

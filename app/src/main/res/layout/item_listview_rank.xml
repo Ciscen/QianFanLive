@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/rank_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_contribution_1"/>
+
+            <TextView
+                android:id="@+id/rank_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:text="1"/>
+        </RelativeLayout>
+
+        <com.example.ciscen.qianfan.view.PolygonImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/header_iv"
+            android:layout_gravity="center"
+            android:background="#eeeeee"
+            android:src="@mipmap/ic_error_default_header"
+            app:poly_rotation_angle="90"
+            app:poly_shadow="true"
+            app:poly_shadow_color="#000000"
+            app:poly_corner_radius="5"
+            app:poly_vertices="6"/>
+
+        <ImageView
+            android:id="@+id/level_iv"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_host_level_10"/>
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#555555"
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            android:text="sdahkdagf"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/isLiving_iv"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/ic_show_live_icon"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
